@@ -1,0 +1,169 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  display: flex;
+  background-color: #0a0a10;
+  justify-content: center;
+}
+.blur {
+  width: 414px;
+  height: 280px;
+  position: absolute;
+  z-index: -1; /* posiciona por tras da imagem*/
+  background-color: #ffffff;
+  opacity: 0.25;
+  filter: blur(24px);
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 0px;
+  max-width: 414px;
+  min-height: 100vh;
+  gap: 12px; /*espaçamento entre os elementos so pode ser usado se for display flex */
+}
+h1 {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 33px;
+  text-align: center;
+  color: #ffffff;
+}
+.container-inputs {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  width: 100%;
+}
+
+label {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 22px;
+  letter-spacing: -0.4px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 4px;
+  margin-left: 4px;
+}
+
+input {
+  width: 100%;
+  height: 42px;
+  margin-bottom: 8px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 28px;
+  letter-spacing: -0.24px;
+  color: #ffffff;
+  padding-left: 4px;
+}
+
+input::placeholder {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 28px;
+  letter-spacing: -0.24px;
+  color: #ffffff;
+}
+.bnt-login {
+  margin-top: 20px;
+  width: 100%;
+  height: 68px;
+  background: #d93859;
+  font-weight: 900;
+  font-size: 17px;
+  line-height: 2px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  transition: 0.3s ease; /*deixa a transição do hover mais lenta*/
+}
+
+.bnt-login:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+.bnt-login:active {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+i {
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 2px;
+}
+
+.bnt-gogle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 68px;
+  border: none;
+  transition: 0.3s ease;
+  background: rgba(255, 255, 255, 0.14);
+  font-weight: 900;
+  font-size: 17px;
+  line-height: 2px;
+  color: #ffffff;
+  gap: 12px;
+}
+
+.bnt-gogle:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+.bnt-gogle:active {
+  opacity: 0.6;
+  cursor: pointer;
+}
+.container-link {
+  position: relative;
+  margin-top: 20px;
+}
+
+a {
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 16px;
+  color: rgba(255, 255, 2555, 0.6);
+  text-decoration: none; /*decoraçaõ do texto*/
+}
+
+a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  background: #d93859;
+  bottom: -3px;
+  left: 0;
+  transition: 0.3s ease;
+}
+
+a:hover::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  background: #d93859;
+  bottom: -3px;
+  left: 0;
+}
+
+span {
+  color: #ffffff;
+}
