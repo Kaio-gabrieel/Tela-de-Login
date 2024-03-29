@@ -6,13 +6,13 @@
 }
 
 body {
-  display: flex;
   background-color: #0a0a10;
   justify-content: center;
 }
 .blur {
-  width: 442px;
-  height: 468px;
+  width: 467px;
+  height: 618px;
+  margin-left: 25px;
   position: absolute;
   z-index: -1; /* posiciona por tras da imagem*/
   background-color: #ebd704;
@@ -20,23 +20,25 @@ body {
   filter: blur(24px);
 }
 img {
-  width: 400px;
-  max-height: 488px;
+  width: 463px;
+  height: 574px;
+  margin-left: 25px;
+  display: inline-block;
 }
 
 main {
-  display: flex;
+  display: inline-block;
   flex-direction: column;
   align-items: center;
   padding: 15px 0px;
-  max-width: 414px;
-  min-height: 100vh;
   gap: 12px; /*espaçamento entre os elementos so pode ser usado se for display flex */
 }
 h1 {
+  display: inline-block;
   font-weight: 700;
   font-size: 36px;
   line-height: 33px;
+  margin-bottom: 34px;
   text-align: center;
   max-height: 50px;
   color: #a9940a;
@@ -44,15 +46,16 @@ h1 {
 }
 
 .container-inputs {
-  display: flex;
+  display: inline-block;
   flex-direction: column;
-  margin-top: 20px;
-  width: 100%;
+  margin-left: 100px;
+  margin-top: 50px;
+  width: 351px;
 }
 
 label {
   font-weight: 400;
-  font-size: 13px;
+  font-size: 19px;
   line-height: 22px;
   letter-spacing: -0.4px;
   color: rgba(255, 255, 255, 0.6);
@@ -85,13 +88,14 @@ input::placeholder {
 }
 .bnt-login {
   margin-top: 20px;
-  width: 100%;
+  width: 200px;
   height: 58px;
   background: #770101;
   font-weight: 900;
   font-size: 17px;
   line-height: 2px;
   border: none;
+  border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -126,7 +130,7 @@ i {
 
 a {
   font-weight: 900;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 16px;
   color: rgba(255, 255, 2555, 0.6);
   text-decoration: none; /*decoraçaõ do texto*/
@@ -158,14 +162,22 @@ span {
 }
 
 @media screen and (max-width: 430px) {
+  body {
+    max-width: 430px;
+  }
+
   img {
-    width: 303px;
+    width: 100%;
   }
   .blur {
-    height: 364px;
+    height: 604px;
   }
-  a h1 {
-    font-size: 30px;
+  h1 {
+    font-size: 35px;
     line-height: 36px;
+  }
+  .container-inputs {
+    align-items: center;
+    justify-content: center;
   }
 }
